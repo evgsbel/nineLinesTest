@@ -1,0 +1,22 @@
+// Custom grid an example bootstrap
+
+$columns: 8;
+$gutter: 44px;
+$gutter-column: $gutter / 2;
+$adaptive-breakpoints: (
+	"sm": 576px,
+	"md": 768px,
+	"lg": 992px,
+	"xl": 1200px
+);
+
+@each $size in map-keys($adaptive-breakpoints) {
+	@media (min-width: map_get($adaptive-breakpoints, $size)) {
+		@for $i from 1 through $columns {
+			.column-#{$size}-#{$i} {
+				flex: 0 0 percentage($i / $columns);
+				max-width: percentage($i / $columns);
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.row.align-items-start
+	.avatar.column-md-2.column
+		img.avatar__img(src="../images/avatar.jpg" alt="")
+	form.column-md-6.form(action="/" method="post")
+		input.form__input.form__input--name(type="text" name="name" minlength="4" maxlength="30" placeholder="Евгений Беляков")
+		input.form__input.form__input--date(type="date" name="date" value="1989-04-27")
+		input.form__input.form__input--city#email(type="email" pattern="^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.[A-Za-z]" placeholder="evgsbel@gmail.com")
+		input.form__input.form__input--contact#phone(type="tel" placeholder="+7(929) 701-44-70" minlength="17" maxlength="17")
+	.line
